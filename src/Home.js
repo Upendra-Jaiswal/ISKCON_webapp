@@ -1,20 +1,31 @@
 // src/pages/Home.js
 import React from "react";
-import banner01 from "./assets/Banner01.jpg";
+import herosection from "./assets/HeroSection/herosection.png";
 
 const Home = () => {
   return (
-    <div
-      className="h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${banner01})`,
-        backgroundSize: "cover", // Ensures the image covers the whole div
-        backgroundPosition: "center", // Centers the image
-      }}
-    >
-      <div className="flex items-center justify-center h-full bg-black bg-opacity-50">
-        <div className="text-center"></div>
+    <div className="relative flex flex-col items-center justify-center py-12 bg-backgroundimg">
+      <div className="flex flex-col items-center justify-center p-6 bg-black bg-opacity-50 rounded-lg shadow-lg mb-10 pt-10">
+        <div
+          className="bg-center"
+          style={{
+            backgroundImage: `url(${herosection})`,
+            backgroundSize: "contain", // Ensures the hero section image fits nicely
+            backgroundRepeat: "no-repeat",
+            width: "200px", // Adjust width as needed
+            height: "100px", // Adjust height as needed
+            margin: "0 auto", // Centers the image horizontally
+          }}
+        ></div>
+        <h1 className="text-white text-3xl font-bold mt-4">Welcome to Iskon</h1>
+        <p
+          className="text-white mt-2 text-lg"
+          style={{ fontFamily: "Pacifico, cursive" }}
+        >
+          Sri Sri Radha Gopinath Temple
+        </p>
       </div>
+      
     </div>
   );
 };
